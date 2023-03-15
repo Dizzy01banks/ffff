@@ -46,3 +46,50 @@ function processData(csvData) {
 
 // Add event listener to "grades" button
 document.getElementById('grades-btn').addEventListener('click', readCSVFile);
+// Get the button and grades table elements
+const gradesBtn = document.getElementById("grades-btn");
+const gradesTable = document.getElementById("grades-table");
+
+// Add an event listener to the grades button
+gradesBtn.addEventListener("click", displayGrades);
+
+// Function to display the grades table
+function displayGrades() {
+  // Use AJAX to get the grades data from the server
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "grades.csv");
+  xhr.onload = function () {
+    if (this.status === 200) {
+      // Parse the CSV data into an array of objects
+      const gradesArr = csvToArray(this.responseText);
+
+      // Build the HTML table from the grades array
+      let tableHtml = "<table>";
+      tableHtml += "<tr><th>Subject</th><th>Grade</th></tr>";
+      for (let i = 0; i < gradesArr.length; i++) {
+        tableHtml += `<tr><td>${gradesArr[i].subject}</td><td>${gradesArr[i].grade}</td></tr>`;
+      }
+      tableHtml += "</table>";
+
+      // Set the grades table element's HTML to the built table
+      gradesTable.innerHTML = tableHtml;
+    }
+  };
+  xhr.send();
+}
+
+// Function to parse CSV data into an array of objects
+function csvToArray(csvData) {
+  const lines = csvData.split("\n");
+  const result = [];
+  const headers = lines[0].split(",");
+  for (let i = 1; i < lines.length; i++) {
+    const obj = {};
+    const currentLine = lines[i].split(",");
+    for (let j = 0; j < headers.length; j++) {
+      obj[headers[j].trim()] = currentLine[j].trim();
+    }
+    result.push(obj);
+  }
+  return result;
+}
