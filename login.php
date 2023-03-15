@@ -1,16 +1,26 @@
-<?php
-
-$username = $_POST['username'];
-$password = $_POST['password'];
-
-if ($username == 'Admin' && $password == 'Diz1') {
-	// Successful login, redirect to student dashboard
-	header('Location: dashboard.php');
-	exit();
-} else {
-	// Invalid login, redirect back to landing page with error message
-	header('Location: index.php?login_error=Invalid username or password.');
-	exit();
-}
-
-?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="style-navy-orange.css">
+</head>
+<body>
+	<header>
+		<h1>Login</h1>
+	</header>
+	<main>
+		<form action="dashboard.php" method="post">
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username">
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password">
+			<select name="portal">
+				<option value="parent">Parent</option>
+				<option value="student">Student</option>
+				<option value="teacher">Teacher</option>
+			</select>
+			<button type="submit">Login</button>
+		</form>
+	</main>
+</body>
+</html>
