@@ -1,0 +1,31 @@
+<?php
+session_start();
+if(isset($_SESSION['username'])) {
+  // user is already logged in
+  header("Location: dashboard.php");
+}
+
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+
+  // check if the username and password are correct
+  if($username == 'admin' && $password == 'secret') {
+    $_SESSION['username'] = $username;
+    header("Location: dashboard.php");
+  } else {
+    $error = "Invalid username or password";
+  }
+}
+?>
+
+<!-- Login Form -->
+<form method="post">
+  <input type="text" name="username" placeholder="Username">
+  <input type="password" name="password" placeholder="Password">
+  <button type="submit">Login</button>
+</form>
+
+<?php if(isset($error)): ?>
+  <p><?php echo $error; ?></p>
+<?php endif; ?>
