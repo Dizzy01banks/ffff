@@ -21,3 +21,4 @@ function accessStudentPortal() {
     redirectToLogin();
   }
 }
+<a id="student-portal-link" href="student_portal.html" onclick="accessStudentPortal()">Student Portal</a>
