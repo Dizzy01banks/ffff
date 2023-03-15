@@ -28,3 +28,24 @@
 		<p>&copy; 2023 Student Portal</p>
 	</footer>
 </body>
+<a href="#" id="student-portal-link" onclick="accessStudentPortal()">Student Portal</a>
+
+<script>
+function accessStudentPortal() {
+  // check if the user is logged in
+  if (!isLoggedIn()) {
+    // redirect the user to the login page
+    window.location.href = "login.html";
+  } else {
+    // redirect the user to the student portal
+    window.location.href = "student_portal.html";
+  }
+}
+
+function isLoggedIn() {
+  // check if the user is logged in
+  // you can implement this function according to your authentication system
+  // for example, you can check if the user's session or token is still valid
+  // return true if the user is logged in, otherwise return false
+}
+</script>
