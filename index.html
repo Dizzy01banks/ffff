@@ -1,24 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>DIZ Grading System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIZ - Online Grading System</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
-      <h1>DIZ Grading System</h1>
+      <nav>
+        <a href="index.html" class="logo">DIZ</a>
+        <ul>
+          <li><a href="parent_portal.html">Parent Portal</a></li>
+          <li><a href="student_portal.html">Student Portal</a></li>
+          <li><a href="teacher_portal.html">Teacher Portal</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-      <form action="login.html">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <input type="submit" value="Log In">
-      </form>
+      <section class="hero">
+        <h1>Welcome to DIZ - Online Grading System</h1>
+        <p>Access your grades, assignments and more with ease.</p>
+      </section>
+      <section class="features">
+        <div class="feature">
+          <img src="images/feature-1.png" alt="Feature 1">
+          <h2>View Grades</h2>
+          <p>Access your grades online and view detailed reports on your academic performance.</p>
+        </div>
+        <div class="feature">
+          <img src="images/feature-2.png" alt="Feature 2">
+          <h2>Submit Assignments</h2>
+          <p>Submit your assignments online and receive feedback from your teacher.</p>
+        </div>
+        <div class="feature">
+          <img src="images/feature-3.png" alt="Feature 3">
+          <h2>Communicate with Teachers</h2>
+          <p>Send messages to your teachers and get quick responses to your questions.</p>
+        </div>
+      </section>
     </main>
+    <footer>
+      <p>&copy; 2023 DIZ - Online Grading System</p>
+    </footer>
   </body>
 </html>
