@@ -66,3 +66,51 @@ main {
   background-size: cover;
   background-position: center;
   height: 400
+/* Update the font families and sizes for better readability */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+/* Make the navbar more visible with a bold font and orange color */
+.navbar {
+  background-color: #252c41;
+  color: white;
+  font-weight: bold;
+}
+
+/* Increase the size and weight of the page headers */
+.page-header {
+  font-size: 28px;
+  font-weight: bold;
+  color: #252c41;
+}
+
+/* Update the style of the login form with a more visible background color */
+.login-form {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* Make the buttons more visible with a bold font and navy color */
+button {
+  background-color: #252c41;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+/* Increase the font size and weight for the table headers */
+th {
+  font-size: 18px;
+  font-weight: bold;
+  color: #252c41;
+}
+
+/* Update the style of the log out button with a navy color */
+.logout-button {
+  color: #252c41;
+  font-weight: bold;
+}
