@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Grading System Login</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+	<title>Online Grading System</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<header>
-		<h1>Grading System</h1>
+		<h1>Online Grading System</h1>
 	</header>
 	<main>
-		<div class="container">
-			<div class="form-box">
-				<h2>Student Login</h2>
-				<form action="student_dashboard.html">
-					<label for="student_id">Student ID:</label>
-					<input type="text" id="student_id" name="student_id" required>
-					<label for="student_password">Password:</label>
-					<input type="password" id="student_password" name="student_password" required>
-					<button type="submit">Login</button>
-				</form>
-			</div>
-			<div class="form-box">
-				<h2>Parent Login</h2>
-				<form action="parent_dashboard.html">
-					<label for="parent_email">Email:</label>
-					<input type="email" id="parent_email" name="parent_email" required>
-					<label for="parent_password">Password:</label>
-					<input type="password" id="parent_password" name="parent_password" required>
-					<button type="submit">Login</button>
-				</form>
-			</div>
-			<div class="form-box">
-				<h2>Teacher Login</h2>
-				<form action="teacher_dashboard.html">
-					<label for="teacher_email">Email:</label>
-					<input type="email" id="teacher_email" name="teacher_email" required>
-					<label for="teacher_password">Password:</label>
-					<input type="password" id="teacher_password" name="teacher_password" required>
-					<button type="submit">Login</button>
-				</form>
-			</div>
-		</div>
+		<section>
+			<h2>Parent Portal</h2>
+			<p>Log in to view your child's grades and attendance.</p>
+			<form action="parent.php">
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username">
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password">
+				<button type="submit">Log In</button>
+			</form>
+		</section>
+		<section>
+			<h2>Teacher Portal</h2>
+			<p>Log in to enter grades and attendance.</p>
+			<form action="teacher.php">
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username">
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password">
+				<button type="submit">Log In</button>
+			</form>
+		</section>
+		<section>
+			<h2>Student Portal</h2>
+			<p>Log in to view your grades and attendance.</p>
+			<form action="student.php">
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username">
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password">
+				<button type="submit">Log In</button>
+			</form>
+		</section>
 	</main>
-	<footer>
-		<p>© 2023 Grading System. All Rights Reserved.</p>
-	</footer>
 </body>
 </html>
